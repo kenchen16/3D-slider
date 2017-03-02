@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .cubeRolling{
+            width: 560px;
+            height: 300px;
+            margin: 100px auto;
+            box-shadow: 0  0 1px 1px rgba(0,0,0,0.4);
+        }
+        ul{
+            padding: 0;
+            list-style: none;
+            width: 560px;
+            height: 300px;
+            position: relative;
+
+        }
+        li{
+            float: left;
+            transform-style:preserve-3d;
+            width: 112px;
+            height:300px;
+            position: relative;
+            transition: all 1s linear;
+        }
+        li:nth-child(2){
+            transition-delay: 0.2s;
+        }
+        li:nth-child(3) {
+            transition-delay: 0.4s;
+        }
+        li:nth-child(4) {
+            transition-delay: 0.6s;
+        }
+        li:nth-child(5) {
+            transition-delay: 0.8s;
+        }
+        li span{
+            position: absolute;
+            width: 112px;
+            height:300px;
+        }
+         
+        li span:nth-child(1){
+            background: url("images/1.jpg");
+            transform: translateZ(150px)
+        }
+        li span:nth-child(2){
+            background: url("images/2.jpg");
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        li span:nth-child(3){
+            background: url("images/3.jpg");
+            transform: rotateX(-180deg) translateZ(150px);
+        }
+        li span:nth-child(4){
+            background: url("images/4.jpg");
+            transform: rotateX(-270deg) translateZ(150px);
+        }
+        li:nth-child(2) span{
+            background-position: -112px;
+
+
+        }
+        li:nth-child(3) span{
+            background-position: -224px;
+
+        }
+        li:nth-child(4) span{
+            background-position: -336px;
+
+        }
+        li:nth-child(5) span{
+            background-position: -448px;
+
+        }
+        .arrow{
+            height: 66px;
+            line-height: 66px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            margin-top: -33px;
+        }
+        .arrow b:first-child{
+            background-color: rgba(0,0,0,.3);
+            text-align: right;
+            float: right;
+            width: 66px;
+            font-size: 40px;
+            color: white;
+        }
+        .arrow b:nth-child(2) {
+            background-color: rgba(0,0,0,.3);
+            float: left;
+            width: 66px;
+            font-size: 40px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+  <div class="cubeRolling">
+      <ul>
+          <li><span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </li>
+          <li><span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </li>
+          <li><span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </li>
+          <li><span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </li>
+          <li><span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </li>
+          <div class="arrow">
+              <b class="arrowR">&gt;</b>
+              <b class="arrowL">&lt;</b>
+          </div>
+      </ul>
+
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
